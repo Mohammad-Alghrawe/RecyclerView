@@ -35,17 +35,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void addItems(){
+    private void addItems() {
         try {
-                for (int i = 0; i<20; i++){
-                    modelClassArrayList.add(new ModelClass(
-                            R.drawable.smile,
-                            "Name :" + i,
-                            "Email : " + i
-                    ));
-                }
+            for (int i = 0; i < 20; i++) {
+                modelClassArrayList.add(new ModelClass(
+                        R.drawable.smile,
+                        "Name :" + i,
+                        "Email : " + i
+                ));
+            }
 
-        }catch (Exception e){
+        } catch (Exception e) {
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
