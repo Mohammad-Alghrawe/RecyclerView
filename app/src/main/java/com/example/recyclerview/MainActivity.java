@@ -6,12 +6,14 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import com.example.recyclerview.modelclass.ModelClass;
+import com.example.recyclerview.myadapter.MyAdapter;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
     ArrayList<ModelClass> modelClassArrayList;
+    MyAdapter myAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
 
         modelClassArrayList = new ArrayList<>();
         addItems();
+
+        myAdapter = new MyAdapter(modelClassArrayList);
     }
 
 
