@@ -1,6 +1,7 @@
 package com.example.recyclerview;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.widget.Toast;
@@ -14,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     ArrayList<ModelClass> modelClassArrayList;
     MyAdapter myAdapter;
+    RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         addItems();
 
         myAdapter = new MyAdapter(modelClassArrayList);
+        recyclerView = findViewById(R.id.RV);
     }
 
 
