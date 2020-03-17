@@ -1,6 +1,7 @@
 package com.example.recyclerview;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -27,6 +28,10 @@ public class MainActivity extends AppCompatActivity {
 
         myAdapter = new MyAdapter(modelClassArrayList);
         recyclerView = findViewById(R.id.RV);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        recyclerView.setAdapter(myAdapter);
     }
 
 
